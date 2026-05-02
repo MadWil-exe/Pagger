@@ -118,20 +118,47 @@ function renderHackingUi(ns) {
             args: [],
           });
         }, "#38bdf8"),
-        actionButton("Root All", function () {
-          queueHackingAction({
-            name: "Root All",
-            script: "/PaggerOS/tools/rootall.js",
-            args: [],
-          });
-        }, "#fa5215ff"),
-                actionButton("Backdoor", function () {
-          queueHackingAction({
-            name: "Backdoor",
-            script: "/PaggerOS/tools/backdoor-targets.js",
-            args: [],
-          });
-        }, "#fa5215ff"),
+      ),
+      collapsibleSection(
+        `Pagger`,
+        "pagger",
+        [
+          actionButton("Root All", function () {
+            queueHackingAction({
+              name: "Root All",
+              script: "/PaggerOS/tools/rootall.js",
+              args: [],
+            });
+          }, "#fa5215ff"),
+          actionButton("Backdoor", function () {
+            queueHackingAction({
+              name: "Backdoor",
+              script: "/PaggerOS/tools/backdoor-targets.js",
+              args: [],
+            });
+          }, "#fa5215ff"),
+          actionButton("Group Manager", function () {
+            queueHackingAction({
+              name: "Group Manager",
+              script: "/PaggerOS/tools/group-auto.js",
+              args: [],
+            });
+          }, "#fac815ff"),
+          actionButton("Multi-Pagger", function () {
+            const target = targets?.[0]?.server;
+
+            if (!target) {
+              ns.toast("No top target available for Multi-Pagger.", "warning");
+              return;
+            }
+
+            queueHackingAction({
+              name: `Multi-Pagger: ${target}`,
+              script: "/PaggerOS/tools/pagger.js",
+              args: [target],
+            });
+          }, "#fac815ff")
+        ]
       ),
       collapsibleSection(
         `Purchased Servers (${pservs.length})`,
