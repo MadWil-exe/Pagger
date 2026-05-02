@@ -43,8 +43,8 @@ export const CONFIG = {
   actions: [
     {
       name: "Solve Contracts",
-      script: "/PaggerOS/tools/contracts-solve.js",
-      args: [],
+      script: "/PaggerOS/tools/cct-mgr.js",
+      args: ["solve"],
       colour: "#facc15",
     },
     {
