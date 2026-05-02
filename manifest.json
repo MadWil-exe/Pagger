@@ -20,7 +20,7 @@
                   "PaggerOS/tools/buy-programs.js",
                   "PaggerOS/tools/buy-svr.js",
                   "PaggerOS/tools/buy-tor.js",
-                  "PaggerOS/tools/contracts-solve.js",
+                  "PaggerOS/tools/cct-mgr.js",
                   "PaggerOS/tools/day-trader.js",
                   "PaggerOS/tools/gang-manager.js",
                   "PaggerOS/tools/hack.js",
