@@ -284,6 +284,12 @@ function solveContract(type, data) {
     case "Square Root":
       return sqrtNearest(data);
 
+    case "Largest Rectangle in a Matrix":
+      return solveLargestRectangleInAMatrix(data);
+
+    case "Total Number of Primes":
+      return solveTotalNumberOfPrimes(data);      
+
     default:
       return null;
   }
@@ -297,7 +303,48 @@ function largestPrimeFactor(n) {
   }
   return n;
 }
+function solveTotalNumberOfPrimes(data) {
+  if (Array.isArray(data)) {
+    const min = Number(data[0]);
+    const max = Number(data[1]);
+    return countPrimesBetween(min, max);
+  }
 
+  const n = Number(data);
+
+  // Classic Bitburner behaviour: count primes strictly less than n.
+  return countPrimesBetween(2, n - 1);
+}
+
+function countPrimesBetween(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+
+  if (!Number.isFinite(min) || !Number.isFinite(max)) return 0;
+  if (max < 2 || min > max) return 0;
+
+  min = Math.max(min, 2);
+
+  const sieve = Array(max + 1).fill(true);
+  sieve[0] = false;
+  sieve[1] = false;
+
+  for (let p = 2; p * p <= max; p++) {
+    if (!sieve[p]) continue;
+
+    for (let multiple = p * p; multiple <= max; multiple += p) {
+      sieve[multiple] = false;
+    }
+  }
+
+  let count = 0;
+
+  for (let n = min; n <= max; n++) {
+    if (sieve[n]) count++;
+  }
+
+  return count;
+}
 function maxSubarraySum(arr) {
   let max = -Infinity;
   let cur = 0;
@@ -361,7 +408,75 @@ function spiralizeMatrix(data) {
 
   return result;
 }
+function normaliseBinaryMatrix(data) {
+  if (!Array.isArray(data)) return [];
 
+  return data.map(row => {
+    if (Array.isArray(row)) {
+      return row.map(x => Number(x));
+    }
+
+    if (typeof row === "string") {
+      return row
+        .replace(/[\[\],\s]/g, "")
+        .split("")
+        .filter(x => x === "0" || x === "1")
+        .map(Number);
+    }
+
+    return [];
+  });
+}
+
+function solveLargestRectangleInAMatrix(data) {
+  const matrix = normaliseBinaryMatrix(data);
+
+  if (matrix.length === 0 || matrix[0].length === 0) return "";
+
+  const rows = matrix.length;
+  const cols = matrix[0].length;
+
+  let bestArea = 0;
+  let best = "";
+
+  for (let top = 0; top < rows; top++) {
+    const clearCols = Array(cols).fill(true);
+
+    for (let bottom = top; bottom < rows; bottom++) {
+      for (let c = 0; c < cols; c++) {
+        if (matrix[bottom][c] === 1) {
+          clearCols[c] = false;
+        }
+      }
+
+      let left = 0;
+
+      while (left < cols) {
+        while (left < cols && !clearCols[left]) left++;
+
+        let right = left;
+
+        while (right < cols && clearCols[right]) right++;
+
+        if (right > left) {
+          const area = (bottom - top + 1) * (right - left);
+
+          if (area > bestArea) {
+            bestArea = area;
+            best = [
+              [top, left],
+              [bottom, right - 1],
+            ];
+          }
+        }
+
+        left = right + 1;
+      }
+    }
+  }
+
+  return best;
+}
 function arrayJumpingGame(arr) {
   let reach = 0;
   for (let i = 0; i < arr.length; i++) {
