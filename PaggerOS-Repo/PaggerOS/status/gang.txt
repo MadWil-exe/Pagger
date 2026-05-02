@@ -1,0 +1,14 @@
+﻿{
+  "state": "watching",
+  "message": "11 member(s), 96.88% wanted penalty",
+  "inGang": true,
+  "running": true,
+  "faction": "Slum Snakes",
+  "members": 11,
+  "respect": 31,
+  "wanted": 1,
+  "wantedPenalty": 0.96875,
+  "territory": 1,
+  "power": 219601.21764144933,
+  "updated": 1777730514274
+}
