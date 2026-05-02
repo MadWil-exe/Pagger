@@ -1,0 +1,307 @@
+﻿{
+  "state": "watching",
+  "message": "25 pserv(s), 17 hackable target(s)",
+  "hacking": 286,
+  "serversSeen": 95,
+  "rooted": 95,
+  "hackable": 17,
+  "homeMaxRam": 16384,
+  "homeUsedRam": 95.75,
+  "homeFreeRam": 16288.25,
+  "purchasedCount": 25,
+  "purchasedLimit": 25,
+  "purchasedMaxRam": 1048576,
+  "totalPservRam": 6656,
+  "usedPservRam": 0,
+  "freePservRam": 6656,
+  "pservs": [
+    {
+      "name": "MiniMarv-1",
+      "maxRam": 512,
+      "usedRam": 0,
+      "freeRam": 512,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-2",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-3",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-4",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-5",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-6",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-7",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-8",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-9",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-10",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-11",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-12",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-13",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-14",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-15",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-16",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-17",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-18",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-19",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-20",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-21",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-22",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-23",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-24",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    },
+    {
+      "name": "MiniMarv-25",
+      "maxRam": 256,
+      "usedRam": 0,
+      "freeRam": 256,
+      "usedPct": 0
+    }
+  ],
+  "targets": [
+    {
+      "server": "the-hub",
+      "maxMoney": 4280734375,
+      "money": 171229375,
+      "moneyPct": 0.04,
+      "minSec": 12,
+      "sec": 35,
+      "secDelta": 23,
+      "requiredHack": 285,
+      "growth": 55
+    },
+    {
+      "server": "johnson-ortho",
+      "maxMoney": 1790397800,
+      "money": 71615912,
+      "moneyPct": 0.04,
+      "minSec": 12,
+      "sec": 37,
+      "secDelta": 25,
+      "requiredHack": 266,
+      "growth": 61
+    },
+    {
+      "server": "omega-net",
+      "maxMoney": 1594342700,
+      "money": 63773708,
+      "moneyPct": 0.04,
+      "minSec": 10,
+      "sec": 30,
+      "secDelta": 20,
+      "requiredHack": 193,
+      "growth": 31
+    },
+    {
+      "server": "crush-fitness",
+      "maxMoney": 1241520075,
+      "money": 49660803,
+      "moneyPct": 0.04,
+      "minSec": 13,
+      "sec": 38,
+      "secDelta": 25,
+      "requiredHack": 251,
+      "growth": 32
+    },
+    {
+      "server": "silver-helix",
+      "maxMoney": 1125000000,
+      "money": 45000000,
+      "moneyPct": 0.04,
+      "minSec": 10,
+      "sec": 30,
+      "secDelta": 20,
+      "requiredHack": 150,
+      "growth": 30
+    },
+    {
+      "server": "phantasy",
+      "maxMoney": 600000000,
+      "money": 24000000,
+      "moneyPct": 0.04,
+      "minSec": 7,
+      "sec": 20,
+      "secDelta": 13,
+      "requiredHack": 100,
+      "growth": 35
+    },
+    {
+      "server": "iron-gym",
+      "maxMoney": 500000000,
+      "money": 20000000,
+      "moneyPct": 0.04,
+      "minSec": 10,
+      "sec": 30,
+      "secDelta": 20,
+      "requiredHack": 100,
+      "growth": 20
+    },
+    {
+      "server": "max-hardware",
+      "maxMoney": 250000000,
+      "money": 10000000,
+      "moneyPct": 0.04,
+      "minSec": 5,
+      "sec": 15,
+      "secDelta": 10,
+      "requiredHack": 80,
+      "growth": 30
+    },
+    {
+      "server": "zer0",
+      "maxMoney": 187500000,
+      "money": 7500000,
+      "moneyPct": 0.04,
+      "minSec": 8,
+      "sec": 25,
+      "secDelta": 17,
+      "requiredHack": 75,
+      "growth": 40
+    },
+    {
+      "server": "neo-net",
+      "maxMoney": 125000000,
+      "money": 5000000,
+      "moneyPct": 0.04,
+      "minSec": 8,
+      "sec": 25,
+      "secDelta": 17,
+      "requiredHack": 50,
+      "growth": 25
+    }
+  ],
+  "updated": 1777730513203
+}

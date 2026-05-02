@@ -1,0 +1,162 @@
+﻿[
+  {
+    "outcome": "solved",
+    "server": "blade",
+    "file": "contract-8Q7YgZ.cct",
+    "type": "Generate IP Addresses",
+    "reward": "Gained 166 reputation for each of the following factions: Aevum, Sector-12, The Syndicate, Netburners, Tian Di Hui",
+    "time": 1777728813738
+  },
+  {
+    "outcome": "solved",
+    "server": "kuai-gong",
+    "file": "contract-Xmrswy.cct",
+    "type": "Encryption II: VigenÃ¨re Cipher",
+    "reward": "Gained 1666.6666666666665 faction reputation for The Syndicate",
+    "time": 1777728813738
+  },
+  {
+    "outcome": "solved",
+    "server": "n00dles",
+    "file": "contract-Pc5Kye.cct",
+    "type": "Algorithmic Stock Trader IV",
+    "reward": "Gained 6666.666666666666 faction reputation for Aevum",
+    "time": 1777726937510
+  },
+  {
+    "outcome": "solved",
+    "server": "silver-helix",
+    "file": "contract-iE4FDT.cct",
+    "type": "Minimum Path Sum in a Triangle",
+    "reward": "Gained 833 reputation for each of the following factions: Aevum, Sector-12, The Syndicate, Netburners, Tian Di Hui",
+    "time": 1777725778699
+  },
+  {
+    "outcome": "solved",
+    "server": "ecorp",
+    "file": "contract-t8aEVO.cct",
+    "type": "Subarray with Maximum Sum",
+    "reward": "Gained 55 reputation for each of the following factions: Aevum, Sector-12, The Syndicate, Netburners, Tian Di Hui",
+    "time": 1777725008453
+  },
+  {
+    "outcome": "solved",
+    "server": "catalyst",
+    "file": "contract-TJijhA.cct",
+    "type": "Largest Rectangle in a Matrix",
+    "reward": "Gained 333 reputation for each of the following factions: Aevum, Sector-12, The Syndicate, Netburners, Tian Di Hui",
+    "time": 1777725008453
+  },
+  {
+    "outcome": "solved",
+    "server": "joesguns",
+    "file": "contract-X8aXxV.cct",
+    "type": "Array Jumping Game II",
+    "reward": "Gained 833.3333333333333 faction reputation for Aevum",
+    "time": 1777721966526
+  },
+  {
+    "outcome": "solved",
+    "server": "ecorp",
+    "file": "contract-aElbG8.cct",
+    "type": "Algorithmic Stock Trader II",
+    "reward": "Gained 555.5555555555555 faction reputation for Sector-12",
+    "time": 1777721476836
+  },
+  {
+    "outcome": "solved",
+    "server": "ecorp",
+    "file": "contract-8HqNY6.cct",
+    "type": "Array Jumping Game II",
+    "reward": "Gained 2500 faction reputation for Aevum",
+    "time": 1777721476836
+  },
+  {
+    "outcome": "solved",
+    "server": "omnitek",
+    "file": "contract-llRjlp.cct",
+    "type": "Total Ways to Sum",
+    "reward": "Gained 833.3333333333333 faction reputation for Netburners",
+    "time": 1777721476836
+  },
+  {
+    "outcome": "solved",
+    "server": "helios",
+    "file": "contract-O9ClSU.cct",
+    "type": "Algorithmic Stock Trader I",
+    "reward": "Gained 166 reputation for each of the following factions: Aevum, Sector-12, The Syndicate, Netburners, Tian Di Hui",
+    "time": 1777721476836
+  },
+  {
+    "outcome": "solved",
+    "server": "foodnstuff",
+    "file": "contract-6EMefk.cct",
+    "type": "Algorithmic Stock Trader I",
+    "reward": "Gained 55 reputation for each of the following factions: Aevum, Sector-12, The Syndicate, Netburners, Tian Di Hui",
+    "time": 1777721476835
+  },
+  {
+    "outcome": "solved",
+    "server": "zeus-med",
+    "file": "contract-5IyxxP.cct",
+    "type": "Proper 2-Coloring of a Graph",
+    "reward": "Gained 1166 reputation for each of the following factions: Aevum, Sector-12, The Syndicate, Netburners, Tian Di Hui",
+    "time": 1777713254795
+  },
+  {
+    "outcome": "solved",
+    "server": "b-and-a",
+    "file": "contract-TQlWsn.cct",
+    "type": "Algorithmic Stock Trader I",
+    "reward": "Gained 55 reputation for each of the following factions: Aevum, Sector-12, The Syndicate, Netburners, Tian Di Hui",
+    "time": 1777713107861
+  },
+  {
+    "outcome": "solved",
+    "server": "lexo-corp",
+    "file": "contract-OO1GbO.cct",
+    "type": "Subarray with Maximum Sum",
+    "reward": "Gained 166 reputation for each of the following factions: Aevum, Sector-12, The Syndicate, Netburners, Tian Di Hui",
+    "time": 1777713107860
+  },
+  {
+    "outcome": "solved",
+    "server": ".",
+    "file": "contract-xVZvIq.cct",
+    "type": "Algorithmic Stock Trader IV",
+    "reward": "Gained 6666.666666666666 faction reputation for Sector-12",
+    "time": 1777713077691
+  },
+  {
+    "outcome": "solved",
+    "server": "global-pharm",
+    "file": "contract-Gjuyul.cct",
+    "type": "Encryption II: VigenÃ¨re Cipher",
+    "reward": "Gained 333 reputation for each of the following factions: Aevum, Sector-12, The Syndicate, Netburners, Tian Di Hui",
+    "time": 1777713077691
+  },
+  {
+    "outcome": "solved",
+    "server": "aerocorp",
+    "file": "contract-S5R8S8.cct",
+    "type": "Total Ways to Sum II",
+    "reward": "Gained 333 reputation for each of the following factions: Aevum, Sector-12, The Syndicate, Netburners, Tian Di Hui",
+    "time": 1777713077691
+  },
+  {
+    "outcome": "solved",
+    "server": "zer0",
+    "file": "contract-IIpxJ3.cct",
+    "type": "Unique Paths in a Grid II",
+    "reward": "Gained 833 reputation for each of the following factions: Aevum, Sector-12, The Syndicate, Netburners, Tian Di Hui",
+    "time": 1777709311656
+  },
+  {
+    "outcome": "solved",
+    "server": "global-pharm",
+    "file": "contract-n5WhAR.cct",
+    "type": "Shortest Path in a Grid",
+    "reward": "Gained 5833.333333333333 faction reputation for Aevum",
+    "time": 1777706619473
+  }
+]
