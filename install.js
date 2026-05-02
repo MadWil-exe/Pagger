@@ -63,5 +63,5 @@ export async function main(ns) {
 
   ns.tprint("PaggerOS install complete.");
   ns.tprint("Run it with:");
-  ns.tprint("run /PaggerOS/main.js");
+  ns.tprint("run /PaggerOS/kernel.js");
 }
