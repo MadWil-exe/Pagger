@@ -1,4 +1,4 @@
-﻿/** @param {NS} ns **/
+/** @param {NS} ns **/
 export async function main(ns) {
   ns.disableLog("ALL");
   ns.ui.openTail();
@@ -460,7 +460,7 @@ function collapsibleSection(title, key, children) {
         toggleSection(key);
       },
     },
-      h("div", {}, `${open ? "â–¼" : "â–¶"} ${title}`),
+      h("div", {}, `${open ? "" : ""} ${title}`),
       h("div", { style: styles.collapsibleHint }, open ? "click to collapse" : "click to expand")
     ),
 

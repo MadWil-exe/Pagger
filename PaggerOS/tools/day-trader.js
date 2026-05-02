@@ -1,4 +1,4 @@
-﻿/** @param {NS} ns **/
+/** @param {NS} ns **/
 export async function main(ns) {
     ns.disableLog("ALL");
 
@@ -27,7 +27,7 @@ export async function main(ns) {
             } catch { }
         }
         ns.tprint(`Total realised: $${ns.format.number(total)}`);
-        ns.tprint("âœ… Safe to install augments!");
+        ns.tprint(" Safe to install augments!");
         return;
     }
 
@@ -39,7 +39,7 @@ export async function main(ns) {
     const has4S = ns.stock.has4SDataTixApi();
 
     const CFG = {
-        BUY_4S:         0.54,   // aggressive â€” buy at 54% forecast
+        BUY_4S:         0.54,   // aggressive  buy at 54% forecast
         SELL_4S:        0.50,
         SHORT_4S:       0.46,   // aggressive short at 46%
         COVER_4S:       0.50,
@@ -136,11 +136,11 @@ export async function main(ns) {
         };
     }
 
-    ns.tprint("â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•");
-    ns.tprint("  DAYTRADER.JS â€” AGGRESSIVE MODE");
-    ns.tprint(`  4S: ${has4S ? "YES âœ…" : "NO âŒ (momentum mode)"}`);
+    ns.tprint("");
+    ns.tprint("  DAYTRADER.JS  AGGRESSIVE MODE");
+    ns.tprint(`  4S: ${has4S ? "YES " : "NO  (momentum mode)"}`);
     ns.tprint("  run daytrader.js sellall before augmenting!");
-    ns.tprint("â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•");
+    ns.tprint("");
 
     while (true) {
         loopN++;
@@ -175,8 +175,8 @@ export async function main(ns) {
                         if (ns.stock.sellStock(sym, longShares) > 0) {
                             realised += pnl; trades++; sells++;
                             ns.tprint(pnl >= 0
-                                ? `ðŸ“¤ SOLD  ${sym.padEnd(5)} +$${ns.format.number(pnl)}`
-                                : `ðŸ”´ CUT   ${sym.padEnd(5)} -$${ns.format.number(Math.abs(pnl))}`);
+                                ? ` SOLD  ${sym.padEnd(5)} +$${ns.format.number(pnl)}`
+                                : ` CUT   ${sym.padEnd(5)} -$${ns.format.number(Math.abs(pnl))}`);
                         }
                     }
                 }
@@ -190,7 +190,7 @@ export async function main(ns) {
                         try {
                             if (ns.stock.sellShort(sym, shortShares) > 0) {
                                 realised += pnl; trades++; sells++;
-                                ns.tprint(`ðŸ“¤ COVER ${sym.padEnd(5)} ${pnl >= 0 ? "+" : ""}$${ns.format.number(pnl)}`);
+                                ns.tprint(` COVER ${sym.padEnd(5)} ${pnl >= 0 ? "+" : ""}$${ns.format.number(pnl)}`);
                             }
                         } catch { }
                     }
@@ -205,7 +205,7 @@ export async function main(ns) {
                         if (ns.stock.buyStock(sym, shares) > 0) {
                             trades++; buys++;
                             const fStr = has4S ? `F:${(sig.forecast*100).toFixed(1)}%` : `M:${((sig.mom??0)*100).toFixed(2)}%`;
-                            ns.tprint(`ðŸ“ˆ LONG  ${sym.padEnd(5)} ${ns.format.number(shares)}sh @ $${ns.format.number(ask)} ${fStr}`);
+                            ns.tprint(` LONG  ${sym.padEnd(5)} ${ns.format.number(shares)}sh @ $${ns.format.number(ask)} ${fStr}`);
                         }
                     }
                 }
@@ -220,7 +220,7 @@ export async function main(ns) {
                             if (ns.stock.shortStock(sym, shares) > 0) {
                                 trades++; shorts++;
                                 const fStr = has4S ? `F:${(sig.forecast*100).toFixed(1)}%` : `M:${((sig.mom??0)*100).toFixed(2)}%`;
-                                ns.tprint(`ðŸ“‰ SHORT ${sym.padEnd(5)} ${ns.format.number(shares)}sh @ $${ns.format.number(bid)} ${fStr}`);
+                                ns.tprint(` SHORT ${sym.padEnd(5)} ${ns.format.number(shares)}sh @ $${ns.format.number(bid)} ${fStr}`);
                             }
                         }
                     } catch { }
@@ -241,27 +241,27 @@ export async function main(ns) {
         positions.sort((a,b) => b.pnl - a.pnl);
 
         ns.clearLog();
-        ns.print(`â•”â•â• DAYTRADER | Tick ${loopN} | ${has4S ? "4S âœ…" : "MOMENTUM"} â•â•`);
-        ns.print(`â•‘ ðŸ’° Cash:      $${ns.format.number(money)}`);
-        ns.print(`â•‘ ðŸ“Š Portfolio: $${ns.format.number(port)}`);
-        ns.print(`â•‘ ðŸ¦ Net worth: $${ns.format.number(netWorth)}`);
-        ns.print(`â•‘ ðŸ“ˆ Gain:      ${gain>=0?"+":""}$${ns.format.number(gain)}`);
-        ns.print(`â•‘ âš¡ Gain/hr:   $${ns.format.number(gph)}`);
-        ns.print(`â•‘ âœ… Realised:  $${ns.format.number(realised)} | ${trades} trades`);
-        ns.print(`â•‘    B:${buys} S:${sells} Sh:${shorts}`);
-        ns.print(`â• â•â• Positions: ${positions.length} â•â•â•â•â•â•â•â•â•â•â•â•`);
+        ns.print(` DAYTRADER | Tick ${loopN} | ${has4S ? "4S " : "MOMENTUM"} `);
+        ns.print(`  Cash:      $${ns.format.number(money)}`);
+        ns.print(`  Portfolio: $${ns.format.number(port)}`);
+        ns.print(`  Net worth: $${ns.format.number(netWorth)}`);
+        ns.print(`  Gain:      ${gain>=0?"+":""}$${ns.format.number(gain)}`);
+        ns.print(`  Gain/hr:   $${ns.format.number(gph)}`);
+        ns.print(`  Realised:  $${ns.format.number(realised)} | ${trades} trades`);
+        ns.print(`    B:${buys} S:${sells} Sh:${shorts}`);
+        ns.print(` Positions: ${positions.length} `);
         if (positions.length === 0) {
-            ns.print("â•‘  Scanning for signals...");
+            ns.print("  Scanning for signals...");
         } else {
             for (const p of positions.slice(0, 12)) {
                 const pStr = `${p.pnl>=0?"+":""}$${ns.format.number(p.pnl)}`.padStart(14);
-                ns.print(`â•‘ [${p.type}] ${p.sym.padEnd(5)} ${pStr} | F:${(p.f*100).toFixed(1)}%`);
+                ns.print(` [${p.type}] ${p.sym.padEnd(5)} ${pStr} | F:${(p.f*100).toFixed(1)}%`);
             }
-            if (positions.length > 12) ns.print(`â•‘  +${positions.length-12} more`);
+            if (positions.length > 12) ns.print(`  +${positions.length-12} more`);
         }
-        ns.print(`â• â•â• ${elapsed}m | Peak: $${ns.format.number(peakPort)} â•â•`);
-        if (port > 50000000) ns.print(`â•‘ âš ï¸  SELL BEFORE AUGMENTING: run daytrader.js sellall`);
-        ns.print(`â•šâ•â• Next: ${CFG.TICK/1000}s â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•`);
+        ns.print(` ${elapsed}m | Peak: $${ns.format.number(peakPort)} `);
+        if (port > 50000000) ns.print(`   SELL BEFORE AUGMENTING: run daytrader.js sellall`);
+        ns.print(` Next: ${CFG.TICK/1000}s `);
 
         await ns.sleep(CFG.TICK);
     }

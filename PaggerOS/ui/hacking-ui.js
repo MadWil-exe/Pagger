@@ -1,4 +1,4 @@
-﻿import { readStatus } from "/PaggerOS/lib/status.js";
+import { readStatus } from "/PaggerOS/lib/status.js";
 
 /** @param {NS} ns **/
 export async function main(ns) {
@@ -289,7 +289,7 @@ function collapsibleSection(title, key, children) {
         toggleSection(key);
       },
     },
-      h("div", {}, `${open ? "â–¼" : "â–¶"} ${title}`),
+      h("div", {}, `${open ? "" : ""} ${title}`),
       h("div", { style: styles.collapsibleHint }, open ? "click to collapse" : "click to expand")
     ),
 

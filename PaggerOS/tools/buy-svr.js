@@ -1,4 +1,4 @@
-﻿/** @param {NS} ns **/
+/** @param {NS} ns **/
 export async function main(ns) {
     const ram = 2;
     const limit = ns.cloud.getServerLimit();

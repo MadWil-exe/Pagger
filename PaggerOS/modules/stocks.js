@@ -1,4 +1,4 @@
-﻿import { writeStatus } from "/PaggerOS/lib/status.js";
+import { writeStatus } from "/PaggerOS/lib/status.js";
 
 /** @param {NS} ns **/
 export async function main(ns) {

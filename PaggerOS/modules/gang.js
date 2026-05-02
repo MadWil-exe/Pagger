@@ -1,4 +1,4 @@
-﻿import { writeStatus } from "/PaggerOS/lib/status.js";
+import { writeStatus } from "/PaggerOS/lib/status.js";
 
 const MANAGER_SCRIPT = "/PaggerOS/tools/gang-manager.js";
 

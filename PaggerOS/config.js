@@ -1,4 +1,4 @@
-﻿export const CONFIG = {
+export const CONFIG = {
   osName: "PaggerOS",
   tickMs: 1000,
 

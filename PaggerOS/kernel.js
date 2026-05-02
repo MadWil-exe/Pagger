@@ -1,4 +1,4 @@
-﻿import { CONFIG } from "/PaggerOS/config.js";
+import { CONFIG } from "/PaggerOS/config.js";
 import { readStatus } from "/PaggerOS/lib/status.js";
 
 /** @param {NS} ns **/
@@ -142,7 +142,7 @@ function renderDashboard(ns) {
                 fontWeight: "bold",
                 color: running ? "#86efac" : "#cbd5e1",
               },
-            }, `${running ? "â—" : "â—‹"} ${mod.name}`),
+            }, `${running ? "" : ""} ${mod.name}`),
 
             h("div", {
               style: {
@@ -372,7 +372,7 @@ function collapsibleSection(title, key, children = []) {
       style: styles.collapsibleHeader,
       onClick: () => toggleSection(key),
     },
-      h("span", {}, `${open ? "â–¼" : "â–¶"} ${title}`),
+      h("span", {}, `${open ? "" : ""} ${title}`),
       h("span", {
         style: {
           fontSize: "10px",

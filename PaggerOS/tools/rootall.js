@@ -1,4 +1,4 @@
-﻿/** @param {NS} ns */
+/** @param {NS} ns */
 export async function main(ns) {
     const seen = new Set(["home"]);
     const queue = ["home"];

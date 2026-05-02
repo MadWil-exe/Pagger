@@ -1,4 +1,4 @@
-﻿/** @param {NS} ns **/
+/** @param {NS} ns **/
 export async function main(ns) {
   ns.disableLog("ALL");
 
@@ -131,7 +131,7 @@ const SOLVERS = {
 
   // Encryption
   "Encryption I: Caesar Cipher": solveCaesarCipher,
-  "Encryption II: VigenÃ¨re Cipher": solveVigenereCipher,
+  "Encryption II: Vigenre Cipher": solveVigenereCipher,
   "Proper 2-Coloring of a Graph": solveProperTwoColoring,
   // Other common contracts, useful while you are here
   "Find Largest Prime Factor": solveLargestPrimeFactor,
@@ -582,7 +582,7 @@ function solveCaesarCipher(data) {
 }
 
 // ------------------------------------------------------------
-// Encryption II: VigenÃ¨re Cipher
+// Encryption II: Vigenre Cipher
 // ------------------------------------------------------------
 
 function solveVigenereCipher(data) {

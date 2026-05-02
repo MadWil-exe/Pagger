@@ -1,4 +1,4 @@
-﻿export function statusPath(name) {
+export function statusPath(name) {
   return `/PaggerOS/status/${name.toLowerCase()}.txt`;
 }
 

@@ -1,4 +1,4 @@
-﻿// /os/tools/kill-os.js
+// /os/tools/kill-os.js
 
 /** @param {NS} ns **/
 export async function main(ns) {

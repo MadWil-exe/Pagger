@@ -1,4 +1,4 @@
-﻿const MILESTONE_TARGETS = [
+const MILESTONE_TARGETS = [
     "CSEC",
     "avmnite-02h",
     "I.I.I.I",

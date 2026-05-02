@@ -1,4 +1,4 @@
-﻿import { writeStatus } from "/PaggerOS/lib/status.js";
+import { writeStatus } from "/PaggerOS/lib/status.js";
 
 /** @param {NS} ns **/
 export async function main(ns) {
@@ -109,5 +109,5 @@ const SOLVER_REGISTRY = new Set([
 
   // Encryption
   "Encryption I: Caesar Cipher",
-  "Encryption II: VigenÃ¨re Cipher",
+  "Encryption II: Vigenre Cipher",
 ]);

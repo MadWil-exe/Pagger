@@ -1,4 +1,4 @@
-﻿export function money(ns, value) {
+export function money(ns, value) {
   return "$" + ns.format.number(value, 2);
 }
 
