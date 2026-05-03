@@ -9,9 +9,9 @@ export async function main(ns) {
     ns.clearLog();
 
     try {
-      renderNaughtyUi(ns);
+      renderCorpUi(ns);
     } catch (err) {
-      ns.print("PaggerOS Naughty UI render failed.");
+      ns.print("PaggerOS Corp UI render failed.");
       ns.print(String(err));
 
       if (err?.stack) {
@@ -23,9 +23,9 @@ export async function main(ns) {
 
       try {
         processHackingActionQueue(ns);
-        renderNaughtyUi(ns);
+        renderCorpUi(ns);
       } catch (err) {
-        ns.print("PaggerOS Naughty UI render failed.");
+        ns.print("PaggerOS Corp UI render failed.");
         ns.print(String(err));
 
         if (err?.stack) {
@@ -38,7 +38,7 @@ export async function main(ns) {
   }
 }
 
-function renderNaughtyUi(ns) {
+function renderCorpUi(ns) {
   const React = eval("window").React;
 
   if (!React || typeof ns.printRaw !== "function") {
@@ -52,8 +52,8 @@ function renderNaughtyUi(ns) {
     ns.printRaw(
       h("div", { style: styles.page },
         h("div", { style: styles.header },
-          h("div", { style: styles.title }, "PaggerOS Naughty"),
-          h("div", { style: styles.subtitle }, "No hacking status yet. Is /PaggerOS/modules/hacking.js running?")
+          h("div", { style: styles.title }, "PaggerOS Corp"),
+          h("div", { style: styles.subtitle }, "No Corp status yet. Is /PaggerOS/modules/corp.js running?")
         )
       )
     );
@@ -64,7 +64,7 @@ function renderNaughtyUi(ns) {
     h("div", { style: styles.page },
 
       h("div", { style: styles.header },
-        h("div", { style: styles.title }, "PaggerOS Naughty"),
+        h("div", { style: styles.title }, "PaggerOS Corp"),
         h("div", { style: styles.subtitle }, "Cheeky.....")
       ),
 

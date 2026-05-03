@@ -10,9 +10,9 @@ export async function main(ns) {
   ns.disableLog("ALL");
 
   const WORKERS = {
-    hack: "workers/hack.js",
-    grow: "workers/grow.js",
-    weaken: "workers/weaken.js",
+    hack: "PaggerOS/tools/cmd/hack.js",
+    grow: "PaggerOS/tools/cmd/grow.js",
+    weaken: "PaggerOS/tools/cmd/weaken.js",
   };
 
   // Edit server names to match yours
