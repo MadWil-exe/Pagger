@@ -24,7 +24,7 @@ export async function main(ns) {
       const upgraded = ns.cloud.upgradeServer(server, nextRam);
 
       if (upgraded) {
-        ns.tprint(`\x1b[32mUpgraded ${server} from ${currentRam}GB to ${nextRam}GB for $${ns.format.number(cost)}\x1b[0m`);
+        ns.tprint(`\x1b[32mUpgraded ${server} from ${currentRam} Genders to ${nextRam} Genders for $${ns.format.number(cost)}\x1b[0m`);
       }
     }
   }

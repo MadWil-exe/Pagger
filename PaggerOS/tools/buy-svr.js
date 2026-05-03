@@ -16,10 +16,11 @@ export async function main(ns) {
             const hostname = ns.cloud.purchaseServer(serverName, ram);
 
             if (hostname) {
-                ns.tprint(`Bought ${hostname} - It's mentally unstable....`);
+                ns.tprint(`Bought ${hostname} - Lost the cock, kept the beard....`);
                 i++;
             } else {
-                ns.tprint(`Failed to buy ${serverName}`);
+                ns.tprint(`${serverName} has multiple personalities.....`);
+                return
             }
         }
 
