@@ -65,29 +65,39 @@ function renderCorpUi(ns) {
 
       h("div", { style: styles.header },
         h("div", { style: styles.title }, "PaggerOS Corp"),
-        h("div", { style: styles.subtitle }, "Cheeky.....")
+        h("div", { style: styles.subtitle }, "Wholesale Homones and Puberty Blockers")
       ),
 
       h("div", { style: styles.grid },
-        statBox("Chromosomes Collected", status.hacking ?? 0),
-        statBox("Sexualities Identified", status.serversSeen ?? 0),
+        statBox("Sector-12", status.hacking ?? 0),
+        statBox("Aevum", status.serversSeen ?? 0),
         statBox("Penises Discarded", status.rooted ?? 0),
+        statBox("Penises Discarded", status.rooted ?? 0),
+        statBox("Penises Discarded", status.rooted ?? 0),
+        statBox("Penises Discarded", status.rooted ?? 0)
       ),
+      actionButton("Buy Corp", function () {
+        queueHackingAction({
+          name: "Buy Corp",
+          script: "/PaggerOS/corp/setup/buy-corp.js",
+          args: [],
+        });
+      }, "#3bfa15"),
       collapsibleSection(
         `Pagger....`,
         "pagger",
         [
-          actionButton("IPvGO", function () {
+          actionButton("Placeholder", function () {
             queueHackingAction({
-              name: "IPvGO",
-              script: "/PaggerOS/IPvGO/go4.js",
+              name: "Placeholder",
+              script: "/PaggerOS/corp/setup/Placeholder.js",
               args: [],
             });
           }, "#facc15"),
-          actionButton("God Mode", function () {
+          actionButton("Placeholder", function () {
             queueHackingAction({
-              name: "God Mode",
-              script: "/PaggerOS/tools/dev-menu.js",
+              name: "Placeholder",
+              script: "/PaggerOS/tools/Placeholder.js",
               args: [],
             });
           }, "#facc15"),

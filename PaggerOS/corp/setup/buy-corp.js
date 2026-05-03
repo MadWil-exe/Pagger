@@ -1,4 +1,4 @@
-const CORP_NAME = "PaggerCorp";
+const CORP_NAME = "TrannyCorp";
 const STATUS_FILE = "/PaggerOS/status/corp.txt";
 const STATE_FILE = "/PaggerOS/status/corp-state.txt";
 

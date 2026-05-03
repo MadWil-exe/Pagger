@@ -65,6 +65,12 @@ export const CONFIG = {
       args: [],
       colour: "#38bdf8",
     },
+        {
+      name: "Corp",
+      script: "/PaggerOS/ui/corp-ui.js",
+      args: [],
+      colour: "#38bdf8",
+    },
     {
       name: "Naughty",
       script: "/PaggerOS/ui/naughty-ui.js",
