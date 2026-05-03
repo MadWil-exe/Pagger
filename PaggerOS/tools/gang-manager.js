@@ -13,7 +13,7 @@ export async function main(ns) {
     penaltySoftFloor: 0.95,
 
     // Territory
-    desiredWarfareMembers: 12,
+    desiredWarfareMembers: 0,
     minClashChanceToFight: 0.60,
 
     // Ascension
@@ -240,10 +240,6 @@ function buyEquipment(ns, members, reserve = 1e9, spendFrac = 0.05) {
   }
 }
 
-function combatScore(m) {
-  return (m.str || 0) + (m.def || 0) + (m.dex || 0) + (m.agi || 0);
-}
-
 function bestTrainingTask(ns) {
   const names = ns.gang.getTaskNames();
   const prefs = ["Train Combat", "Train Hacking", "Train Charisma"];
@@ -254,10 +250,18 @@ function bestTrainingTask(ns) {
 }
 
 function pickBestMoneyTask(ns, member, wantedPenalty = 1) {
-  const power = combatScore(member);
+  const gangInfo = ns.gang.getGangInformation();
+  const isHackingGang = gangInfo.isHacking;
 
-  // If wanted is getting ugly, prefer cleaner jobs
   const lowWantedMode = wantedPenalty < 0.95;
+
+  return isHackingGang
+    ? pickBestHackingMoneyTask(ns, member, lowWantedMode)
+    : pickBestCombatMoneyTask(ns, member, lowWantedMode);
+}
+
+function pickBestCombatMoneyTask(ns, member, lowWantedMode = false) {
+  const power = combatScore(member);
 
   if (power < 500) {
     return pickFirstAvailable(ns, [
@@ -294,12 +298,75 @@ function pickBestMoneyTask(ns, member, wantedPenalty = 1) {
   );
 }
 
-function pickFirstAvailable(ns, choices) {
-  const names = new Set(ns.gang.getTaskNames());
-  for (const task of choices) {
-    if (names.has(task)) return task;
+function pickBestHackingMoneyTask(ns, member, lowWantedMode = false) {
+  const power = hackingScore(member);
+
+  if (power < 100) {
+    return pickFirstAvailable(ns, [
+      "Ransomware",
+      "Phishing",
+    ]);
   }
-  return "Mug People";
+
+  if (power < 250) {
+    return pickFirstAvailable(ns, lowWantedMode
+      ? ["Phishing", "Ransomware", "Identity Theft"]
+      : ["Identity Theft", "Ransomware", "Phishing"]
+    );
+  }
+
+  if (power < 500) {
+    return pickFirstAvailable(ns, lowWantedMode
+      ? ["Identity Theft", "DDoS Attacks", "Plant Virus"]
+      : ["DDoS Attacks", "Identity Theft", "Plant Virus"]
+    );
+  }
+
+  if (power < 900) {
+    return pickFirstAvailable(ns, lowWantedMode
+      ? ["DDoS Attacks", "Plant Virus", "Fraud & Counterfeiting"]
+      : ["Fraud & Counterfeiting", "Plant Virus", "DDoS Attacks"]
+    );
+  }
+
+  if (power < 1400) {
+    return pickFirstAvailable(ns, lowWantedMode
+      ? ["Plant Virus", "Fraud & Counterfeiting", "Money Laundering"]
+      : ["Money Laundering", "Fraud & Counterfeiting", "Plant Virus"]
+    );
+  }
+
+  return pickFirstAvailable(ns, lowWantedMode
+    ? ["Money Laundering", "Fraud & Counterfeiting", "Cyberterrorism"]
+    : ["Cyberterrorism", "Money Laundering", "Fraud & Counterfeiting"]
+  );
+}
+
+function combatScore(member) {
+  return (
+    member.str +
+    member.def +
+    member.dex +
+    member.agi
+  ) / 4;
+}
+
+function hackingScore(member) {
+  // Charisma helps some gang tasks, but hacking is the big one.
+  return member.hack + member.cha * 0.25;
+}
+
+function pickFirstAvailable(ns, taskNames) {
+  for (const task of taskNames) {
+    try {
+      ns.gang.getTaskStats(task);
+      return task;
+    } catch {
+      // Task does not exist in this gang/type/version. Ignore it.
+    }
+  }
+
+  return "Train Hacking";
 }
 
 function safeSetTask(ns, memberName, task) {

@@ -35,7 +35,7 @@ export const CONFIG = {
     {
       name: "Corp",
       script: "/PaggerOS/modules/corp.js",
-      enabled: false,
+      enabled: true,
       args: [],
     },
   ],
