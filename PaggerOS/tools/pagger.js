@@ -1,6 +1,6 @@
 /** @param {NS} ns **/
 export async function main(ns) {
-    const script = "/PaggerOS/tools/farm.js";
+    const script = "/PaggerOS/tools/cmd/farm.js";
     const target = ns.args[0];
 
     if (!script || !target) {

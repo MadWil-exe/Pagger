@@ -24,6 +24,7 @@
                   "PaggerOS/tools/buy-svr.js",
                   "PaggerOS/tools/buy-tor.js",
                   "PaggerOS/tools/cct-mgr.js",
+                  "PaggerOS/tools/cmd/farm.js",
                   "PaggerOS/tools/cmd/grow.js",
                   "PaggerOS/tools/cmd/hack.js",
                   "PaggerOS/tools/cmd/weaken.js",
