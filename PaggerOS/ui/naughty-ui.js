@@ -65,23 +65,29 @@ function renderNaughtyUi(ns) {
 
       h("div", { style: styles.header },
         h("div", { style: styles.title }, "PaggerOS Naughty"),
-        h("div", { style: styles.subtitle }, status.message ?? status.state ?? "watching")
+        h("div", { style: styles.subtitle }, "Cheeky.....")
       ),
 
       h("div", { style: styles.grid },
-        statBox("Hacking", status.hacking ?? 0),
-        statBox("Servers Seen", status.serversSeen ?? 0),
-        statBox("Rooted", status.rooted ?? 0),
-        statBox("Hackable", status.hackable ?? 0)
+        statBox("Chromosomes Collected", status.hacking ?? 0),
+        statBox("Sexualities Identified", status.serversSeen ?? 0),
+        statBox("Penises Discarded", status.rooted ?? 0),
       ),
       collapsibleSection(
         `Pagger....`,
         "pagger",
         [
-          actionButton("Root All", function () {
+          actionButton("IPvGO", function () {
             queueHackingAction({
-              name: "Root All",
-              script: "/PaggerOS/tools/rootall.js",
+              name: "IPvGO",
+              script: "/PaggerOS/IPvGO/go4.js",
+              args: [],
+            });
+          }, "#facc15"),
+          actionButton("God Mode", function () {
+            queueHackingAction({
+              name: "God Mode",
+              script: "/PaggerOS/tools/dev-menu.js",
               args: [],
             });
           }, "#facc15"),
