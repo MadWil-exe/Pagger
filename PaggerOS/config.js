@@ -48,28 +48,34 @@ export const CONFIG = {
       colour: "#facc15",
     },
     {
-      name: "Open Trader UI",
+      name: "Trader",
       script: "/PaggerOS/ui/stocks-ui.js",
       args: ["--dry"],
       colour: "#38bdf8",
     },
     {
-      name: "Gang UI",
+      name: "Gang",
       script: "/PaggerOS/ui/gang-ui.js",
       args: [],
       colour: "#38bdf8",
     },
     {
-      name: "Hacking UI",
+      name: "Hacking",
       script: "/PaggerOS/ui/hacking-ui.js",
       args: [],
       colour: "#38bdf8",
     },
-        {
-      name: "Naughty UI",
+    {
+      name: "Naughty",
       script: "/PaggerOS/ui/naughty-ui.js",
       args: [],
       colour: "#38bdf8",
+    },
+        {
+      name: "Auto-Start",
+      script: "/PaggerOS/tools/auto-start.js",
+      args: [],
+      colour: "#facc15",
     },
   ],
 };
