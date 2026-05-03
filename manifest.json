@@ -4,6 +4,7 @@
     "files":  [
                   "PaggerOS/config.js",
                   "PaggerOS/corp/corp-auto.js",
+                  "PaggerOS/IPvGO/go4.js.js",
                   "PaggerOS/kernel.js",
                   "PaggerOS/lib/format.js",
                   "PaggerOS/lib/status.js",
