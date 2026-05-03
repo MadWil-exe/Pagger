@@ -5,7 +5,7 @@
                   "PaggerOS/config.js",
                   "PaggerOS/corp/corp-auto.js",
                   "PaggerOS/corp/setup/agriculture.js",
-                  "PaggerOS/corp/setup/buy-corp.js.js",
+                  "PaggerOS/corp/setup/buy-corp.js",
                   "PaggerOS/corp/setup/round1-balance.js",
                   "PaggerOS/corp/setup/round1-rp.js",
                   "PaggerOS/IPvGO/go4.js.js",
